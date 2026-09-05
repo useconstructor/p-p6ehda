@@ -1,13 +1,41 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   --color-primary: #0A0A0A;
   --color-secondary: #1A1714;
   --color-accent: #C9A962;
   --color-background: #F2EEE6;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-@layer base {
-  * { box-sizing: border-box; }
-  body { margin: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: #fff;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
